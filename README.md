@@ -124,7 +124,7 @@ dataset = load_dataset('tanganke/gtsrb')
 
 ## Dataset Structure
 
-The dataset is provided in 10 splits, including training data and clean test data:
+The dataset is provided in 9 splits, including training data and clean test data:
 
 - train: 26,640 images 
 - test: 12,630 images

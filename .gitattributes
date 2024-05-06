@@ -1,1 +1,10 @@
 *.zip filter=lfs diff=lfs merge=lfs -text
+data/train-00000-of-00001.parquet filter=lfs diff=lfs merge=lfs -text
+data/test-00000-of-00001.parquet filter=lfs diff=lfs merge=lfs -text
+data/contrast-00000-of-00001.parquet filter=lfs diff=lfs merge=lfs -text
+data/gaussian_noise-00000-of-00001.parquet filter=lfs diff=lfs merge=lfs -text
+data/impulse_noise-00000-of-00001.parquet filter=lfs diff=lfs merge=lfs -text
+data/jpeg_compression-00000-of-00001.parquet filter=lfs diff=lfs merge=lfs -text
+data/motion_blur-00000-of-00001.parquet filter=lfs diff=lfs merge=lfs -text
+data/pixelate-00000-of-00001.parquet filter=lfs diff=lfs merge=lfs -text
+data/spatter-00000-of-00001.parquet filter=lfs diff=lfs merge=lfs -text

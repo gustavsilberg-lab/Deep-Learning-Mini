@@ -1,4 +1,10 @@
 ---
+language:
+- en
+size_categories:
+- 10K<n<100K
+task_categories:
+- image-classification
 dataset_info:
   features:
   - name: image
@@ -32,9 +38,8 @@ dataset_info:
           '22': red and white triangle rough / bumpy road warning
           '23': red and white triangle car skidding / slipping warning
           '24': red and white triangle with merging / narrow lanes warning
-          '25': >-
-            red and white triangle with person digging / construction / road
-            work warning
+          '25': red and white triangle with person digging / construction / road work
+            warning
           '26': red and white triangle with traffic light approaching warning
           '27': red and white triangle with person walking warning
           '28': red and white triangle with child and person walking warning
@@ -50,48 +55,61 @@ dataset_info:
           '38': blue circle with white keep right arrow mandatory
           '39': blue circle with white keep left arrow mandatory
           '40': blue circle with white arrows indicating a traffic circle
-          '41': >-
-            white circle with gray strike bar indicating no passing for cars has
+          '41': white circle with gray strike bar indicating no passing for cars has
             ended
-          '42': >-
-            white circle with gray strike bar indicating no passing for trucks
+          '42': white circle with gray strike bar indicating no passing for trucks
             has ended
   splits:
   - name: train
-    num_bytes: 3190230
+    num_bytes: 252930879.36
     num_examples: 26640
   - name: test
-    num_bytes: 1411339
+    num_bytes: 104816357.02
     num_examples: 12630
   - name: contrast
-    num_bytes: 1512379
+    num_bytes: 104816357.02
     num_examples: 12630
   - name: gaussian_noise
-    num_bytes: 1663939
+    num_bytes: 104816357.02
     num_examples: 12630
   - name: impulse_noise
-    num_bytes: 1638679
+    num_bytes: 104816357.02
     num_examples: 12630
   - name: jpeg_compression
-    num_bytes: 1714459
+    num_bytes: 104816357.02
     num_examples: 12630
   - name: motion_blur
-    num_bytes: 1588159
+    num_bytes: 104816357.02
     num_examples: 12630
   - name: pixelate
-    num_bytes: 1512379
+    num_bytes: 39121740.4
     num_examples: 12630
   - name: spatter
-    num_bytes: 1487119
+    num_bytes: 104816357.02
     num_examples: 12630
-  download_size: 841108239
-  dataset_size: 15718682
-task_categories:
-- image-classification
-language:
-- en
-size_categories:
-- 10K<n<100K
+  download_size: 1027074522
+  dataset_size: 1025767118.8999999
+configs:
+- config_name: default
+  data_files:
+  - split: train
+    path: data/train-*
+  - split: test
+    path: data/test-*
+  - split: contrast
+    path: data/contrast-*
+  - split: gaussian_noise
+    path: data/gaussian_noise-*
+  - split: impulse_noise
+    path: data/impulse_noise-*
+  - split: jpeg_compression
+    path: data/jpeg_compression-*
+  - split: motion_blur
+    path: data/motion_blur-*
+  - split: pixelate
+    path: data/pixelate-*
+  - split: spatter
+    path: data/spatter-*
 ---
 
 

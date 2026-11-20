@@ -32,7 +32,7 @@ opt = torch.optim.Adam([q for q in model.parameters() if q.requires_grad], lr=ar
 sched = torch.optim.lr_scheduler.CosineAnnealingLR(opt, args.epochs)
 
 def run_epoch(dl, train):
-    model.train(train)
+    model.train(train and not args.freeze_backbone)
     total_loss, correct, n = 0, 0, 0
     with torch.set_grad_enabled(train):
         for x, y in dl:

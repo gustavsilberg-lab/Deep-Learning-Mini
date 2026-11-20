@@ -41,7 +41,9 @@ for split in (SPLITS[1:] if args.split == "all" else [args.split]):
                       "per_class_acc": (cm.diagonal() / cm.sum(1)).tolist()}
     print(f"{split}: acc {results[split]['accuracy']:.4f} | macro F1 {results[split]['macro_f1']:.4f}")
     if split == "test":
-        ConfusionMatrixDisplay(cm).plot(include_values=False, cmap="Blues")
+        fig, ax = plt.subplots(figsize=(8, 8))
+        ConfusionMatrixDisplay(cm).plot(ax=ax, include_values=False, cmap="Blues", xticks_rotation="vertical")
+        ax.tick_params(labelsize=6)
         plt.title(name); plt.savefig(f"figures/cm_{name}.png", dpi=200, bbox_inches="tight"); plt.close()
 
 json.dump(results, open(f"results/{name}_test.json", "w"), indent=1)
